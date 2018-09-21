@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<html>
+<head>
+    <title>Quiz</title>
+    <link href="{% static 'quiz/css/bootstrap.min.css' %}" rel="stylesheet">
+</head>
+<body>
+{% block header %}
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Quiz App</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="/">Home</a></li>
+    </ul>
+  </div>
+</nav>
+{% endblock %}
+<div class="container">
+{% block body %}
+
+{% endblock %}
+</div>
+<script src="{% static 'quiz/javascript/jquery.js' %}"></script>
+<script src="{% static 'quiz/javascript/bootstrap.min.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+{% extends 'quiz/base.html' %}
+{% load staticfiles %}
+
+
+{% block body %}
+
+<h1>{{ question.question }}</h1>
+
+<p>Your Answer : {% for sub_ans in sub_answer %}{{ sub_ans }} , {% endfor %} is {{ answer_state }}, Your Score is {{ player.score }} points</p>
+
+<p>Right answer is <b>{% for answer in right_ans %}{{ answer }} , {% endfor %}</b></p>
+
+<a href="{% url 'quiz' %}">Next Question</a>
+
+
+{% endblock %}

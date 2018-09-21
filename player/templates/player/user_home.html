@@ -1,0 +1,22 @@
+{% extends 'player/base.html' %}
+{% load staticfiles %}
+
+{% block title %} {{ player.user.username }}'s Home {% endblock %}
+
+
+{% block header %}
+<h1>Play Quiz</h1>
+<a href="{% url 'logout' %}">Logout</a>
+{% endblock %}
+
+
+{% block body %}
+<div class="row">
+    <div class="col-lg-5 col-centered">
+        <h1>HI.. {{ player.user.username | upper }}</h1>
+        <p>Your Score is</p>
+        <h1>{{ player.score }}</h1>
+        <a href="{% url 'quiz' %}"><b>Start Playing the Quiz</b></a>
+    </div>
+</div>
+{% endblock %}

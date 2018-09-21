@@ -1,0 +1,16 @@
+{% extends 'quiz/base.html' %}
+{% load staticfiles %}
+
+
+{% block body %}
+
+<h3>{{ question.question }}</h3>
+
+
+<form action="{% url 'quiz' %}" method="post" role="form">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" name="submit" value="Submit">
+</form>
+<p>Note: Hold Ctl and Click To Select Multiple Answers</p>
+{% endblock %}
