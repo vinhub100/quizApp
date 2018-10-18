@@ -22,8 +22,8 @@ go to
 
 http://127.0.0.1:8000/admin
 
-use 'vinayaka' as username
+use '*******' as username
 and
-'admin@1234' as password
+'*********' as password
 
 
